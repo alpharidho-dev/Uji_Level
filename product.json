@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Kaos Polos Katun Premium - Bekas Pakai 3 Kali",
+    "price": 45000,
+    "description": "Kaos polos warna hitam, bahan katun tebal dan nyaman. Kondisi masih sangat layak, tidak ada noda atau robek. Ukuran L (fit M).",
+    "condition": "Bekas Pakai",
+    "category": "Pakaian Pria",
+    "image": "https://picsum.photos/seed/kaos1/400/400",
+    "stock": 1
+  },
+  {
+    "id": 2,
+    "title": "Sepatu Sneakers Lokal - Like New",
+    "price": 150000,
+    "description": "Sepatu sneakers merek lokal, size 42. Hanya dipakai 1 kali untuk acara formal. Masih ada dus asli. Warna putih dengan aksen abu-abu.",
+    "condition": "Sangat Baik",
+    "category": "Sepatu",
+    "image": "https://picsum.photos/seed/sepatu2/400/400",
+    "stock": 1
+  },
+  {
+    "id": 3,
+    "title": "Buku Novel Laskar Pelangi - Andrea Hirata",
+    "price": 25000,
+    "description": "Buku bekas bacaan pribadi, kondisi masih rapi tanpa coretan. Halaman lengkap. Sampul sedikit lecet di bagian sudut.",
+    "condition": "Cukup",
+    "category": "Buku",
+    "image": "https://picsum.photos/seed/buku3/400/400",
+    "stock": 1
+  },
+  {
+    "id": 4,
+    "title": "Headset Bluetooth TWS - Bekas",
+    "price": 80000,
+    "description": "TWS dengan suara jernih, baterai masih awet (sekitar 3 jam pemakaian). Dilengkapi charging case. Bekas pemakaian pribadi, tidak ada kerusakan.",
+    "condition": "Bekas Pakai",
+    "category": "Elektronik",
+    "image": "https://picsum.photos/seed/tws4/400/400",
+    "stock": 1
+  },
+  {
+    "id": 5,
+    "title": "Meja Kayu Minimalis - Bekas Kantor",
+    "price": 350000,
+    "description": "Meja kayu solid ukuran 120x60x75 cm. Ada sedikit goresan di permukaan, namun masih kokoh dan siap pakai. Cocok untuk meja kerja atau belajar.",
+    "condition": "Cukup",
+    "category": "Perabotan",
+    "image": "https://picsum.photos/seed/meja5/400/400",
+    "stock": 1
+  },
+  {
+    "id": 6,
+    "title": "Tas Ransel Laptop 15 inch",
+    "price": 95000,
+    "description": "Tas ransel anti air, kompartemen laptop empuk. Resleting masih berfungsi normal. Ada sedikit lecet di bagian bawah. Warna navy.",
+    "condition": "Bekas Pakai",
+    "category": "Aksesoris",
+    "image": "https://picsum.photos/seed/tas6/400/400",
+    "stock": 1
+  },
+  {
+    "id": 7,
+    "title": "Kamera Analog Vintage - Kondisi Kolektor",
+    "price": 500000,
+    "description": "Kamera analog merek Pentax, model lama. Masih berfungsi untuk foto. Cocok untuk dekorasi atau koleksi. Termasuk tali kamera asli.",
+    "condition": "Sangat Baik",
+    "category": "Koleksi & Hobi",
+    "image": "https://picsum.photos/seed/kamera7/400/400",
+    "stock": 1
+  },
+  {
+    "id": 8,
+    "title": "Celana Jeans Levis 501 - Original",
+    "price": 180000,
+    "description": "Jeans Levis 501 size 32/32, warna biru tua. Bekas pakai luar negeri, tidak ada robek, hanya sedikit pudar di bagian paha. Nyaman dipakai.",
+    "condition": "Bekas Pakai",
+    "category": "Pakaian Pria",
+    "image": "https://picsum.photos/seed/jeans8/400/400",
+    "stock": 1
+  },
+  {
+    "id": 9,
+    "title": "Set Peralatan Masak Teflon - Bekas Laik Pakai",
+    "price": 130000,
+    "description": "Teflon set 3 pcs (wajan, panci, tutup). Anti lengket masih berfungsi, tidak ada goresan parah. Bekas dipakai di dapur pribadi.",
+    "condition": "Cukup",
+    "category": "Rumah Tangga",
+    "image": "https://picsum.photos/seed/teflon9/400/400",
+    "stock": 1
+  },
+  {
+    "id": 10,
+    "title": "Gitar Akustik Yamaha - Bekas Latihan",
+    "price": 400000,
+    "description": "Gitar akustik Yamaha F310, suara masih bagus, senar baru diganti. Ada baret kecil di body. Cocok untuk pemula atau latihan.",
+    "condition": "Bekas Pakai",
+    "category": "Musik",
+    "image": "https://picsum.photos/seed/gitar10/400/400",
+    "stock": 1
+  }
+]
