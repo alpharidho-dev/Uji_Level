@@ -7,12 +7,18 @@
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="stylesheet" href="src/output.css" />
 
+    <!-- Arahkan ke folder node_modules jika menggunakan npm -->
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <div id="navbar-container"></div>
 
-    <div id="product-container"></div>
+<div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+  <!-- Produk akan di-render di sini -->
+</div>
+    
 
     <script defer src="js/main.js"></script>
     <script src="js/navbar.js"></script>
