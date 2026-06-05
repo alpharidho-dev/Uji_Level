@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MWURAH</title>
+  <meta name="description" content="Login ke akun MWURAH Anda untuk mulai berbelanja barang bekas berkualitas." />
+  <link rel="stylesheet" href="src/output.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-emerald-50 min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-md mx-auto p-6">
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100">
+      <!-- Logo -->
+      <div class="text-center mb-8">
+        <a href="dashboard.html" class="text-3xl font-bold text-emerald-600">MWURAH</a>
+        <p class="text-gray-500 text-sm mt-2">Marketplace Barang Bekas Terpercaya</p>
+      </div>
+
+      <h1 class="text-xl font-semibold text-gray-800 mb-6">Masuk ke Akun</h1>
+
+      <!-- Alert message -->
+      <div id="login-alert" class="hidden mb-4 p-3 rounded-lg text-sm font-medium"></div>
+
+      <form id="login-form" onsubmit="return false;">
+        <div class="mb-4">
+          <label for="login-username" class="block text-sm font-medium text-gray-700 mb-1.5">Username</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i data-lucide="user" class="w-4 h-4"></i>
+            </span>
+            <input type="text" id="login-username" placeholder="Masukkan username" 
+              class="pl-10 border border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 p-2.5 rounded-lg w-full" autocomplete="username">
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label for="login-password" class="block text-sm font-medium text-gray-700 mb-1.5">Password</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </span>
+            <input type="password" id="login-password" placeholder="Masukkan password" 
+              class="pl-10 border border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 p-2.5 rounded-lg w-full" autocomplete="current-password">
+          </div>
+        </div>
+
+        <button type="submit" id="login-btn" 
+          class="w-full bg-emerald-600 text-white py-2.5 rounded-lg hover:bg-emerald-700 font-medium transition-colors shadow-sm text-sm">
+          Login
+        </button>
+      </form>
+
+      <div class="mt-6 text-center">
+        <p class="text-sm text-gray-500">
+          Belum punya akun? 
+          <a href="register.html" class="text-emerald-600 hover:underline font-medium">Daftar di sini</a>
+        </p>
+      </div>
+
+      <div class="mt-4 text-center">
+        <a href="dashboard.html" class="text-sm text-gray-400 hover:text-emerald-600 transition-colors">&larr; Kembali ke Toko</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Jika sudah login, redirect
+      if (isLoggedIn()) {
+        window.location.href = "dashboard.html";
+        return;
+      }
+
+      if (typeof lucide !== "undefined") lucide.createIcons();
+
+      const alertEl = document.getElementById("login-alert");
+
+      function showAlert(msg, type) {
+        alertEl.textContent = msg;
+        alertEl.className = "mb-4 p-3 rounded-lg text-sm font-medium " + 
+          (type === "success" ? "bg-emerald-100 text-emerald-800" : "bg-red-100 text-red-800");
+        alertEl.classList.remove("hidden");
+      }
+
+      document.getElementById("login-form").addEventListener("submit", () => {
+        const username = document.getElementById("login-username").value;
+        const password = document.getElementById("login-password").value;
+        const result = loginUser(username, password);
+
+        if (result.success) {
+          showAlert(result.message, "success");
+          setTimeout(() => {
+            // Admin langsung ke admin panel, user ke dashboard
+            if (result.user.role === "admin") {
+              window.location.href = "admin.html";
+            } else {
+              window.location.href = "dashboard.html";
+            }
+          }, 800);
+        } else {
+          showAlert(result.message, "error");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
