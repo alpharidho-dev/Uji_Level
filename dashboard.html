@@ -1,26 +1,87 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard Seken</title>
-    <link rel="icon" type="image/png" href="assets/logo.png" />
-    <link rel="stylesheet" href="src/output.css" />
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MWURAH - Marketplace Barang Bekas Terpercaya</title>
+  <meta name="description" content="MWURAH - Belanja barang bekas berkualitas dengan aman, nyaman, dan transparan." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="src/output.css" />
 
-    <!-- Arahkan ke folder node_modules jika menggunakan npm -->
-    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="./node_modules/flowbite/dist/flowbite.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-emerald-50 min-h-screen">
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body>
-    <div id="navbar-container"></div>
+  <!-- Navbar (static HTML - Flowbite) -->
+  <nav class="bg-white border-b border-emerald-100 shadow-sm sticky top-0 z-50">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+      <!-- Logo -->
+      <a href="dashboard.html" class="flex items-center space-x-2">
+        <span class="self-center text-2xl font-bold text-emerald-600 whitespace-nowrap">MWURAH</span>
+      </a>
 
-<div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-  <!-- Produk akan di-render di sini -->
-</div>
-    
+      <!-- Mobile toggle & cart icons -->
+      <div class="flex items-center md:order-2 gap-2">
+        <!-- Cart icon -->
+        <a href="cart.html" class="relative p-2 text-gray-600 hover:bg-emerald-50 rounded-full transition-colors" aria-label="Cart">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+          <span id="cart-badge" class="absolute top-0.5 right-0.5 bg-emerald-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold" style="display:none">0</span>
+        </a>
 
-    <script defer src="js/main.js"></script>
-    <script src="js/navbar.js"></script>
-  </body>
+        <!-- Auth section (diatur oleh navbar.js) -->
+        <div id="navbar-auth" class="flex items-center gap-2"></div>
+
+        <!-- Hamburger button -->
+        <button data-collapse-toggle="navbar-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-200" aria-controls="navbar-menu" aria-expanded="false">
+          <span class="sr-only">Buka menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav links -->
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-menu">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-emerald-100 rounded-lg bg-emerald-50 md:space-x-1 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+          <li>
+            <a href="dashboard.html" class="flex items-center gap-1.5 px-3 py-2 text-sm text-emerald-700 bg-emerald-100 rounded-full md:bg-emerald-100 md:text-emerald-800 font-medium">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Terbaik
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1.5 px-3 py-2 text-sm text-emerald-600 hover:bg-emerald-50 rounded-full transition-colors font-medium">
+              <i data-lucide="tags" class="w-4 h-4"></i> Termurah
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1.5 px-3 py-2 text-sm text-green-700 hover:bg-green-50 rounded-full transition-colors font-medium">
+              <i data-lucide="flame" class="w-4 h-4"></i> Terlaris
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1.5 px-3 py-2 text-sm text-teal-700 hover:bg-teal-50 rounded-full transition-colors font-medium">
+              <i data-lucide="zap" class="w-4 h-4"></i> Tercepat
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1.5 px-3 py-2 text-sm text-emerald-600 hover:bg-emerald-50 rounded-full transition-colors font-medium">
+              <i data-lucide="help-circle" class="w-4 h-4"></i> Support
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Grid produk -->
+  <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6"></div>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
 </html>
